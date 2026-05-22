@@ -28,14 +28,8 @@ public class EchoClient {
         try {
             socket.setSoTimeout(readTimeout);
 
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(socket.getInputStream())
-            );
-
-            PrintWriter out = new PrintWriter(
-                    socket.getOutputStream(),
-                    true
-            );
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter out = new PrintWriter( socket.getOutputStream(), true);
 
             Scanner scanner = new Scanner(System.in);
 
